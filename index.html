@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>Guess the Number!</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div id="tela-inicial">
+            <a id="title"><b>Guess the Number!</b></a>
+            <button id="btn-play">Play</button>
+        </div>
+
+        <div id="tela-game" class="opacity-zero hidden">
+            <a id="message"><b>Guess the Number</b></a>
+
+            <div id="answer-container">
+                <button class="answer-option" name="op1"></button>
+                <button class="answer-option" name="op2"></button>
+                <button class="answer-option" name="op3"></button>
+            </div>
+
+            <div id="life-container">
+                <img src="heart_icon.png" id="heart1" class="heart" />
+                <img src="heart_icon.png" id="heart2" class="heart" />
+                <img src="heart_icon.png" id="heart3" class="heart" />
+            </div>
+
+
+            <button id="btn-play-again">Play Again</button>
+
+
+        </div>
+    </div>
+</body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script src="js/main.js"></script>
+
+</html>
