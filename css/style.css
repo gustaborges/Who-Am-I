@@ -132,15 +132,15 @@ TELA GAME
 }
 
 .answer-option:hover {
-    background-color: #eef!important;
+    background-color: #eef;
     cursor: pointer;
 }
 
-.answer-option--correct {
+.answer-option--correct, .answer-option--correct:hover {
     background-color: #C5F404;
 }
 
-.answer-option--incorrect {
+.answer-option--incorrect, .answer-option--incorrect:hover{
     background-color: #FF2424;
 }
 

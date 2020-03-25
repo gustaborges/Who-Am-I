@@ -52,8 +52,8 @@ class Game {
     }
     
     nextRound() {
-        if (this.remainingLifes === 0) {
-            GameUI.displayMessage("YOU LOST!");
+        if (this.#remainingLifes === 0) {
+            GameUI.displayMessage("YOU LOSE!");
             this.endGame();
         }
         else {
@@ -105,7 +105,6 @@ class Game {
     
         let rightAnswerElement = document.getElementsByName(this.#rightAnswer)[0];
         GameUI.addClass('answer-option--correct', rightAnswerElement);
-    
         if (rightAnswerElement === answerElement) {
             GameUI.displayMessage("YOU GOT IT!"); //  getRandomSucessMessage()
             this.endGame();
