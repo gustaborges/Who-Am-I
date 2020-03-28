@@ -1,8 +1,9 @@
 import GameFactory from './gamefactory.js'
 
+
 export default class GameUI {
-    static telaInicialElement = document.getElementById("tela-inicial");
-    static telaGame = document.getElementById("tela-game");
+    static telaInicialElement = document.getElementById("start-screen");
+    static telaGame = document.getElementById("game-screen");
     static btnPlayAgain = document.getElementById("btn-play-again");
     static lifeContainerElement = document.getElementById("life-container");
 
@@ -96,10 +97,10 @@ export default class GameUI {
         GameFactory.getGame().restart();
     }
 
-    static fadeInElement(element) {
+    static fadeInElement(element, displayType) {
     
         setTimeout(function() {
-            element.style.display="block";
+            element.style.display = displayType;
         }, 700);
     
         setTimeout(function() {
@@ -107,7 +108,6 @@ export default class GameUI {
             GameUI.removeClass('opacity-zero', element);
         }, 800);
     }
-    
 
     static removeClass(className, element) {
         element.classList.remove(className);

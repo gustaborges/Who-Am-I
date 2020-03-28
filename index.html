@@ -4,40 +4,61 @@
 <head>
     <title>Guess the Number!</title>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container">
-        <div id="tela-inicial">
-            <a id="title"><b>Guess the Number!</b></a>
-            <button id="btn-play">Play</button>
+    <div class="row container">
+        <div class="flex-column" id="start-screen">
+            <div>
+                <h1 class="title txt-uppercase">Guess the Number!</h1>
+            </div>
+
+            <div class="row btn-light-container ">
+                <button class="btn-light txt-uppercase" id="btn-play">Play</button>
+            </div>
         </div>
+    
+        <div id="game-screen" class="grid-container opacity-zero hidden">
+            <header class="row-full-width">
+                <h2 class="txt-uppercase" id="message">Guess the Number</h2>
 
-        <div id="tela-game" class="opacity-zero hidden">
-            <a id="message"><b>Guess the Number</b></a>
+                <div class="hint-container">
+                    <p class="hint"></p>
+                    <p class="hint"></p>
+                </div>
+            </header>
 
-            <div id="answer-container">
-                <button class="answer-option" name="op1"></button>
-                <button class="answer-option" name="op2"></button>
-                <button class="answer-option" name="op3"></button>
+            <div class="row" id="answer-container" >
+                <button class="btn answer-option" name="op1"></button>
+                <button class="btn answer-option" name="op2"></button>
+                <button class="btn answer-option" name="op3"></button>
             </div>
+ 
 
-            <div id="life-container">
-                <img src="./img/heart_icon.png" alt="" id="heart1" class="heart" />
-                <img src="./img/heart_icon.png" alt="" id="heart2" class="heart" />
-                <img src="./img/heart_icon.png" alt="" id="heart3" class="heart" />
+
+            <div class="row" id="third-row">
+                <div id="life-container" >
+                    <div>
+                        <img src="./img/heart_icon.png" alt=" " id="heart1" class="heart" />
+                    </div>
+                    <div>
+                        <img src="./img/heart_icon.png" alt=" " id="heart2" class="heart" />
+                    </div>
+                    <div>
+                        <img src="./img/heart_icon.png" alt=" " id="heart3" class="heart" />
+                    </div>
+                </div>
+
+                <button class="btn-light txt-uppercase" id="btn-play-again">Play Again</button>
+
             </div>
-
-
-            <button id="btn-play-again">Play Again</button>
-
 
         </div>
     </div>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
     <script type="module" src="js/main.js"></script>
-
 </body>
 </html>

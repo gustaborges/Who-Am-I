@@ -8,125 +8,152 @@
 body {
     background-image: linear-gradient(#00C8D5, #0048B8);
     font-family: 'Arvo', serif;
-}
-
-.container {
+    
     width: 100vw;
     height: 100vh;
-    display: flex;
-    flex-direction: row;
-    /*Centralização Horizontal*/
+}
+
+button {
+    border: 0px;
+    font-family: 'Arvo', serif;
+}
+
+.container {    
+    height:100%;
+    width:80%;
+    max-width:650px;
+    margin: 0 auto;
+
     justify-content: center;
-    /*Centralização Vertical*/
     align-items: center;
+}
+
+.btn-light-container {
+    width: 100%;
+    height:150px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.txt-uppercase {
+    text-transform: uppercase;
+}
+
+.btn-light {
+    padding: 1.3rem 3rem;
+    width:45%;
+    /*Flex*/
+    align-self: center;
+    /*Appearence*/
+    background-color: transparent;
+    border: 1.9px solid #fff;
+    border-radius: 70px;
+    /*Fonte*/
+    font-family: 'Arvo', serif;
+    color: white;
+    /*Mouse*/
+    cursor: pointer;
+}
+
+.row {
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+}
+
+
+.flex-column {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.grid-container {
+    display: grid;
+    grid-auto-rows: 1fr 1fr 1fr;
+    grid-gap: 0px;
+
 }
 
 
 /* ------------ 
-TELA INICIAL
+Start Screen
 -------------*/
 
-#tela-inicial {
-    width: 650px;
-    height: 500px;
-    text-transform: uppercase;
-    font-family: 'Arvo', serif;
-    text-align: center;
+#start-screen {
+    height:35%;
+    width: 100%;
+
     color: white;
     transition-property: all;
     transition-timing-function: linear;
     transition-duration: 0.4s;
 }
 
-.opacity-zero {
-    opacity: 0 !important;
-}
-
-.hidden {
-    visibility: hidden !important;
-}
-
-.display-none {
-    display: none;
-}
-
-#title {
-    display: block;
-    padding-top: 100px;
-    font-size: 55px;
-}
-
-button {
-    border: 0px;
-}
-
 #btn-play {
-    /*Aspecto do botão*/
-    background-color: transparent;
-    border: 1.9px solid #fff;
-    border-radius: 100px;
-    /*Espaçamentos*/
-    padding: 1.2rem 3rem;
-    margin-top: 25%;
-    /*Fonte*/
-    font-family: 'Arvo', serif;
-    font-size: 40px;
-    text-transform: uppercase;
-    color: white;
-    /*Mouse*/
-    cursor: pointer;
+    font-size: 2.5rem;    
     transition: 0.20s ease-in-out;
 }
 
 #btn-play:hover {
-    /*Espaçamentos*/
-    margin-top: 25.5%;
-    /*Fonte*/
-    font-size: 35px;
+    font-size: 2.3rem;
+    width:43%;
 }
 
+.title {
+    font-size: 3.3rem;
+    text-align: center;
+}
+
+
 /* ------------ 
-TELA GAME
+Game Screen
 -------------*/
 
-#tela-game {
-    width: 650px;
-    height: 500px;
-    font-family: 'Arvo', serif;
-    text-align: center;
+#game-screen {
+    height:55%;
+    width: 100%;
+
     color: white;
     transition: all 0.6s ease-in-out;
     display:none;
 }
 
-#tela-game #message {
-    display: block;
-    /*Aspecto do area de mensagem*/
+#game-screen #message {
     background-color: transparent;
     border: 1.9px solid #fff;
     border-radius: 100px;
     /*Espaçamentos*/
     padding: 5% 0;
-    margin: 0 10%;
     /*Fonte*/
-    font-family: 'Arvo', serif;
-    font-size: 40px;
+    font-size:2.5rem;
     color: white;
+    text-align: center;
+
+}
+
+/*
+ *   Answer Option
+*/
+
+#answer-container {
+    justify-content: center;
+    align-items: center;
 }
 
 .answer-option {
     display: inline-block;
     text-align: center;
     /*Fonte*/
-    font-family: 'Arvo', serif;
-    font-size: 35px;
+    font-size: 2.2rem;
     color: #535362;
     background-color: white;
     border-radius: 35px;
     /*Espaçamentos*/
-    width: 15%;
+    width: 100px;
     padding: 20px 0;
-    margin: 15% 4% 0 4%;
+    margin: 0 4%;
     /*Efeito*/
     transition: 0.2s;
 }
@@ -144,42 +171,48 @@ TELA GAME
     background-color: #FF2424;
 }
 
+/*Life Container*/
 #life-container {
+    height: 75px;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
-    margin: 12% 28% 0 28%;
-    padding: 10px;
     border-radius: 50px;
     transition: all 0.6s linear;
+    margin:0 auto;
+    padding: 10px 40px;
 }
 
 .heart {
     width: 45px;
-    padding-top: 5px;
-    margin: 0 5%;
+    margin: 0 15px;
+    padding-top:5px;
     transition: all 0.5s linear;
 }
 
 #btn-play-again {
     display: none;
-    cursor: pointer;
-    /*Aspecto do area de mensagem*/
-    background-color: transparent;
-    border: 1.9px solid #fff;
-    border-radius: 100px;
-    /*Espaçamentos*/
-    padding: 1.5rem 2rem;
-    margin:auto;
-    margin-top: 4rem;
-    /*Fonte*/
-    font-family: 'Arvo', serif;
-    font-size: 25px;
-    color: white;
-    /*Efeito*/
-    transition: 0.17s;
+    font-size: 1.6rem;
+    transition: all 0.17s;
+    justify-self: center;
 }
 
 #btn-play-again:hover {
-    font-size: 28px;
-    padding: 1.5rem 2.6rem;
+    font-size: 1.7rem;
+    width:47%;
+}
 
+#third-row {
+    justify-content: center;
+    align-items:center;
+}
+
+.opacity-zero {
+    opacity: 0 !important;
+}
+
+.hidden {
+    visibility: hidden !important;
+}
+
+.display-none {
+    display: none;
 }
