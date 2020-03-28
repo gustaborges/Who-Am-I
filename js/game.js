@@ -23,7 +23,7 @@ export default class Game {
     
     start() {
         GameUI.fadeOutElement(GameUI.telaInicialElement, true);
-        GameUI.fadeInElement(GameUI.telaGame);
+        GameUI.fadeInElement(GameUI.telaGame, "grid");
         this.startGame();
     }
 
@@ -42,14 +42,14 @@ export default class Game {
     }
 
     startGame() {    
-        GameUI.fadeInElement(GameUI.telaGame);
-        GameUI.fadeInElement(GameUI.lifeContainerElement);
+        GameUI.fadeInElement(GameUI.telaGame, "grid");
+        GameUI.fadeInElement(GameUI.lifeContainerElement, "flex");
         this.nextRound();
     }
 
     endGame() {
         GameUI.fadeOutElement(GameUI.lifeContainerElement, true);
-        GameUI.fadeInElement(GameUI.btnPlayAgain);
+        GameUI.fadeInElement(GameUI.btnPlayAgain, "block");
     }
     
     nextRound() {
